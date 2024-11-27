@@ -13,7 +13,6 @@ namespace MauiAppEventoPrograma.Models
 
         public String? Nome { get; set; }
 
-
         public DateTime DataInicio {get; set;}
 
         public DateTime DataTermino {get; set;}

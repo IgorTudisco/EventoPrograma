@@ -8,7 +8,6 @@
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="20">
 
-            <!-- Título -->
             <Label 
                 Text="Evento marcado"
                 FontSize="30"
@@ -16,7 +15,6 @@
                 FontAttributes="Bold"
                 HorizontalOptions="Center" />
 
-            <!-- Informações do Evento -->
             <Frame BorderColor="DarkViolet" 
                    CornerRadius="15" 
                    HasShadow="True" 
@@ -24,7 +22,6 @@
                    Margin="0">
                 <VerticalStackLayout Spacing="15">
 
-                    <!-- Nome do Evento -->
                     <Label Text="Nome do evento:"
                            TextColor="{StaticResource Gray100}"
                            FontSize="18" />
@@ -34,7 +31,6 @@
                            BackgroundColor="White"
                            HeightRequest="40" />
 
-                    <!-- Local do Evento -->
                     <Label Text="Local do Evento:"
                            TextColor="{StaticResource Gray100}"
                            FontSize="18" />
@@ -44,7 +40,6 @@
                            BackgroundColor="White"
                            HeightRequest="40" />
 
-                    <!-- Data de Início -->
                     <HorizontalStackLayout>
                         <Label Text="Data de início:"
                                TextColor="{StaticResource Gray100}"
@@ -57,7 +52,6 @@
                                     VerticalOptions="Center" />
                     </HorizontalStackLayout>
 
-                    <!-- Data de Término -->
                     <HorizontalStackLayout>
                         <Label Text="Data de término:"
                                TextColor="{StaticResource Gray100}"
@@ -70,7 +64,6 @@
                                     VerticalOptions="Center" />
                     </HorizontalStackLayout>
 
-                    <!-- Número de Participantes -->
                     <HorizontalStackLayout>
                         <Label Text="Número de participantes:"
                                TextColor="{StaticResource Gray100}"
@@ -85,7 +78,6 @@
                                WidthRequest="100" />
                     </HorizontalStackLayout>
 
-                    <!-- Custo por Participante -->
                     <HorizontalStackLayout>
                         <Label Text="Custo por Participante:"
                                TextColor="{StaticResource Gray100}"
@@ -102,8 +94,7 @@
 
                 </VerticalStackLayout>
             </Frame>
-
-            <!-- Botão de Avançar -->
+            
             <Button Text="Avançar"
                     BackgroundColor="DarkViolet"
                     TextColor="White"
