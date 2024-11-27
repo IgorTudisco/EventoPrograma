@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEventoPrograma.Telas.DetalheEvento"
+             Title="DetalheEvento">
+    <VerticalStackLayout>
+        <Label 
+            Text="Detalhes do Evento"
+            TextColor="DarkViolet"
+            FontSize="40"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Frame Margin="10">
+
+            <VerticalStackLayout>
+            
+            
+  <HorizontalStackLayout>       
+        <Label Text="Nome do evento:"
+               FontSize="20"
+               Margin="10" >
+        </Label>
+
+       
+        
+        <Label Text="{Binding nome}"
+               TextColor="DarkViolet"
+               FontSize="20"
+               Margin="10" >
+               
+        </Label>
+</HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            
+            <Label Text="Data de início:"
+                   FontSize="20"
+                   Margin="10" >
+            </Label>
+
+                    <Label Text="{Binding data_inicio, StringFormat='{}{0:dd/MM/yyyy}'}" Margin="10" FontSize="20" TextColor="DarkViolet"></Label>
+            
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            
+            <Label Text="Data de término:"
+                   FontSize="20"
+                   Margin="10" >
+            </Label>
+
+                    <Label Text="{Binding data_termino, StringFormat='{}{0:dd/MM/yyyy}'}" Margin="10" FontSize="20" TextColor="DarkViolet"></Label>
+            
+        </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                
+            <Label Text="Tempo de evento:"
+                   FontSize="20"
+                   Margin="10" >
+                    
+               
+                
+             </Label>
+
+
+                    <Label Text="{Binding Duracao}" Margin="10" FontSize="20" TextColor="DarkViolet" >
+                        
+                  
+            </Label>
+
+                    <Label Text="Dias" Margin="10" FontSize="20" TextColor="DarkViolet"></Label>        
+                    
+</HorizontalStackLayout>
+                
+        <HorizontalStackLayout>
+        
+        <Label Text="Número de participantes:" 
+               FontSize="20"
+               Margin="10" >
+            
+        </Label>
+
+        <Label Text="{Binding participantes}" 
+               TextColor="DarkViolet"
+               FontSize="20"
+               Margin="10" >
+
+        </Label>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+
+            <Label Text="Custo por participante:"
+                   FontSize="20"
+                   Margin="10" >
+                
+            </Label>
+
+                    <Label Text="{Binding custo_participante, StringFormat='{}{0:c}'}" FontSize="20" Margin="10" TextColor="DarkViolet"></Label>
+            
+        </HorizontalStackLayout>
+        
+
+        <HorizontalStackLayout>
+
+            <Label Text="Local:"
+                   FontSize="20"
+                   Margin="10" >
+                
+                
+            </Label>
+
+                    <Label Text="{Binding local}" FontSize="20" Margin="10" TextColor="DarkViolet"></Label>
+            
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+        
+        <Label Text="Custo total:"
+               FontSize="35"
+               Margin="10"
+               HorizontalOptions="CenterAndExpand">
+            
+            
+        </Label>
+
+         <Label Text="{Binding Total, StringFormat='{}{0:c}'}"
+                TextColor="DarkViolet"
+                FontSize="35"
+                Margin="10">
+                
+                
+         </Label>
+            
+        </HorizontalStackLayout>
+            
+            </VerticalStackLayout>
+</Frame>
+        <Button Text="Voltar"
+                Margin="10"
+                Clicked="Button_Clicked"
+                BackgroundColor="{StaticResource Gray100}"
+                TextColor="White">
+            
+            
+        </Button>
+        
+    </VerticalStackLayout>
+</ContentPage>

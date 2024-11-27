@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEventoPrograma.Telas.CadastroEvento"
+             Title="CadastroEvento"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Título -->
+            <Label 
+                Text="Evento marcado"
+                FontSize="30"
+                TextColor="DarkViolet"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Informações do Evento -->
+            <Frame BorderColor="DarkViolet" 
+                   CornerRadius="15" 
+                   HasShadow="True" 
+                   Padding="20" 
+                   Margin="0">
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Nome do Evento -->
+                    <Label Text="Nome do evento:"
+                           TextColor="{StaticResource Gray100}"
+                           FontSize="18" />
+                    <Entry Placeholder="Evento T"
+                           x:Name="evento_nome"
+                           TextColor="DarkViolet"
+                           BackgroundColor="White"
+                           HeightRequest="40" />
+
+                    <!-- Local do Evento -->
+                    <Label Text="Local do Evento:"
+                           TextColor="{StaticResource Gray100}"
+                           FontSize="18" />
+                    <Entry Placeholder="Av. Zé Reuela, 68"
+                           x:Name="evento_local"
+                           TextColor="DarkViolet"
+                           BackgroundColor="White"
+                           HeightRequest="40" />
+
+                    <!-- Data de Início -->
+                    <HorizontalStackLayout>
+                        <Label Text="Data de início:"
+                               TextColor="{StaticResource Gray100}"
+                               FontSize="18"
+                               VerticalOptions="Center" />
+                        <DatePicker x:Name="evento_inicio"
+                                    Format="dd/MM/yyyy"
+                                    TextColor="DarkViolet"
+                                    Margin="0,0,10,0"
+                                    VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <!-- Data de Término -->
+                    <HorizontalStackLayout>
+                        <Label Text="Data de término:"
+                               TextColor="{StaticResource Gray100}"
+                               FontSize="18"
+                               VerticalOptions="Center" />
+                        <DatePicker x:Name="evento_termino"
+                                    Format="dd/MM/yyyy"
+                                    TextColor="DarkViolet"
+                                    Margin="0,0,10,0"
+                                    VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <!-- Número de Participantes -->
+                    <HorizontalStackLayout>
+                        <Label Text="Número de participantes:"
+                               TextColor="{StaticResource Gray100}"
+                               FontSize="18"
+                               VerticalOptions="Center" />
+                        <Entry Placeholder="50"
+                               x:Name="evento_participantes"
+                               TextColor="DarkViolet"
+                               BackgroundColor="White"
+                               Keyboard="Numeric"
+                               HeightRequest="40"
+                               WidthRequest="100" />
+                    </HorizontalStackLayout>
+
+                    <!-- Custo por Participante -->
+                    <HorizontalStackLayout>
+                        <Label Text="Custo por Participante:"
+                               TextColor="{StaticResource Gray100}"
+                               FontSize="18"
+                               VerticalOptions="Center" />
+                        <Entry Placeholder="R$ 0,00"
+                               x:Name="evento_preco"
+                               TextColor="DarkViolet"
+                               BackgroundColor="White"
+                               Keyboard="Numeric"
+                               HeightRequest="40"
+                               WidthRequest="100" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botão de Avançar -->
+            <Button Text="Avançar"
+                    BackgroundColor="DarkViolet"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    Clicked="Button_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
